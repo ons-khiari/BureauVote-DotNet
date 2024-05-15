@@ -1,0 +1,74 @@
+﻿@using Examen.ApplicationCore.Domain
+@model Examen.ApplicationCore.Domain.Electeur
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Electeur</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CIN" class="control-label"></label>
+                <input asp-for="CIN" class="form-control" />
+                <span asp-validation-for="CIN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateNaissance" class="control-label"></label>
+                <input asp-for="DateNaissance" class="form-control" />
+                <span asp-validation-for="DateNaissance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ElecteurId" class="control-label"></label>
+                <input asp-for="ElecteurId" class="form-control" />
+                <span asp-validation-for="ElecteurId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MonGenre" class="control-label"></label>
+                <select asp-for="MonGenre" class="form-control" asp-items="Html.GetEnumSelectList<Genre>()">
+                    <option>Selectionner le genre</option>
+                </select>
+                <span asp-validation-for="MonGenre" class="text-danger"></span>
+            </div>
+
+            <div style="color: blue">BUREAU DE VOTE</div>
+            <div class="form-group">
+                <label asp-for="MonBureauVote.Ville" class="control-label"></label>
+                <input asp-for="MonBureauVote.Ville" class="form-control" />
+                <span asp-validation-for="MonBureauVote.Ville" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MonBureauVote.Gouvernorat" class="control-label"></label>
+                <input asp-for="MonBureauVote.Gouvernorat" class="form-control" />
+                <span asp-validation-for="MonBureauVote.Gouvernorat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MonBureauVote.Ecole" class="control-label"></label>
+                <input asp-for="MonBureauVote.Ecole" class="form-control" />
+                <span asp-validation-for="MonBureauVote.Ecole" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MonBureauVote.NumSalle" class="control-label"></label>
+                <input asp-for="MonBureauVote.NumSalle" class="form-control" />
+                <span asp-validation-for="MonBureauVote.NumSalle" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

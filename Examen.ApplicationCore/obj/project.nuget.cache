@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eVzNwKwB7OiiBjsPX8r2aqlycLlGINgq4junTb9L6lY90ML2rTxF/NlE7UeG8X63BYYBc98x2kcwQHFpQFvX/w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oness\\OneDrive\\Desktop\\SolutionVideExamen\\Examen.ApplicationCore\\Examen.ApplicationCore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oness\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.27\\microsoft.entityframeworkcore.abstractions.6.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}
